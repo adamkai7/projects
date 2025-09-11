@@ -1,0 +1,5 @@
+Contact - adamkainikara@gmail.com
+
+It is best to look at the PDF report, as it explains what this repo is about. In short, it is a report on various research and analysis in quantitative finance that I conducted over the summer. It is a research report applying the Black–Scholes–Merton model, statistical backtesting, and stochastic optimization to simulate 40,000+ option trades, analyze volatility–return dynamics, seasonal and macroeconomic effects, and generate beta, momentum, and correlation-based portfolio insights. Though the report is over 50 pages, it details every experiment conducted (from why it was conducted, to methodology and analysis). All code from this project can be found in the code section, and any printed or outputted results can be found in the results section.
+
+Again, it is best to read the introduction and abstract to get a sense of what topics were covered, and if you have any questions, feel free to contact me at my email!
