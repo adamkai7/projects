@@ -1,0 +1,1906 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+STATS 202: Data Mining and Analysis Homework #2
+\end_layout
+
+\begin_layout Author
+Instructor: Linh Tran 
+\end_layout
+
+\begin_layout Author
+Homework #1
+\end_layout
+
+\begin_layout Author
+Due Date: July 17, 2023
+\end_layout
+
+\begin_layout Author
+Stanford University 
+\end_layout
+
+\begin_layout Author
+Adam Kainikara 
+\end_layout
+
+\begin_layout Standard
+Problem 1 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 4, Exercise 1 (p.
+ 189).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cc}
+4.2 & p(X)=\frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}\\
+4.3 & \frac{p(X)}{1-p(X)}=e^{\beta_{0}+\beta_{1}X}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Starting with 
+\begin_inset Formula $4.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p(X)=(1-p(X))e^{\beta_{0}+\beta_{1}X}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p(X)=e^{\beta_{0}+\beta_{1}X}-e^{\beta_{0}+\beta_{1}X}p(X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p(X)+e^{\beta_{0}+\beta_{1}X}p(X)=e^{\beta_{0}+\beta_{1}X}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p(X)(1+e^{\beta_{0}+\beta_{1}X})=e^{\beta_{0}+\beta_{1}X}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p(X)=\frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is 
+\begin_inset Formula $4.2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore 
+\begin_inset Formula $4.2$
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula $4.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Problem 2 (5 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 4, Exercise 4 (p.
+ 189).
+\end_layout
+
+\begin_layout Standard
+a) Because we are using 10% of observations in the range of X.
+ This is the same as [100x +5)%.
+ To find the average, we will have to integrate it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{0.05}^{0.95}10xdx+\int_{0}^{0.05}10x+5\,dx+\int_{0.95}^{1}105-100x\,dx=9.75$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) X1 and X2 are independent.
+ Under the same assumptions the fraction of available observations would
+ be 
+\begin_inset Formula $9.75\%^{2}=\,\sim\,0.95\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+c) This is similar to (b) just with 100 times.
+ 
+\begin_inset Formula $9.75\%^{100}=\,\sim\,0\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d) As the p increases, the fraction of amiable observations tends to 0.
+\end_layout
+
+\begin_layout Standard
+e) p=100 
+\begin_inset Formula $l=0.1^{0.01}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Problem 3 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 4, Exercise 6 (p.
+ 191).
+\end_layout
+
+\begin_layout Standard
+a) 
+\begin_inset Formula $\hat{\hat{\beta_{0}}=-6\beta_{1}=0.05}\hat{\beta_{2}}=1$
+\end_inset
+
+ are the coefficients for this question.
+ These are coefficients for the constant, number of hours studied and undergrad
+ GPA.
+ Plugging in the values for this particular student gives 
+\begin_inset Formula $-6+(0.05\times40)+(1\times3.5)=-0.5$
+\end_inset
+
+.
+ This value can be plugged into the logistic formula to calculate the probabilit
+y.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{p}(x)=\frac{e^{x}}{1+e^{x}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{p}(x)=\frac{e^{-0.5}}{1+e^{-0.5}}=0.378$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A student who studied for 40 hours and has an undergrad GPA of 3.5 has about
+ a 37.8% chance of getting an A in the class.
+\end_layout
+
+\begin_layout Standard
+b) How long does the student need to study for a 50% chance of an A.
+\end_layout
+
+\begin_layout Standard
+Want 
+\begin_inset Formula $\hat{p}(x)=0.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0.5=\frac{e^{x}}{1+e^{x}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{2e^{x}}=\frac{1}{1+e^{x}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2e^{x}=1+e^{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0=-6+0.05X_{1}+1X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because its the same student and only the hours studied is changing 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+(the GPA) is still the same
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0=-6+0.05X_{1}+1(3.5)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X_{1}=50$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If this student wants a 50% of an A then they should study for 50 hours.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem 4 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 4, Exercise 8 (p.
+ 191).
+\end_layout
+
+\begin_layout Standard
+Using KNN with K = 1, the training error rate can be calculated to be 0%.
+ This means that the test error rate has to be 36% in order for the average
+ to be 18%.
+ Because the logistic regression fit had a test error rate of 20%, we should
+ use the logistic fit because it
+\end_layout
+
+\begin_layout Standard
+has a lower test error rate.
+\end_layout
+
+\begin_layout Standard
+Problem 5 (5 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 4, Exercise 13 parts a-h (p.
+ 193)
+\end_layout
+
+\begin_layout Standard
+a) See bar graph
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw2stats202/hw2img/ch4p13.png
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Min, Max, Mean Stand Dev and Median in the Colors Blue, Orange, Green, Red
+ and Purple Respectively
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bar graph shows the min, max, mean stand dev and median in the colors
+ blue, orange, green, red and purple respectively.
+ These values are for Lag 1, 2, 3, 4, 5, Volume and Today.
+ The bar graph shows similar results for each parameter.
+ Only volume seems to change.
+ The numerical summary for this data is below.
+ 
+\end_layout
+
+\begin_layout Standard
+min: [-18.195 -18.195 -18.195 -18.195 -18.195 0.087465 -18.195 ] 
+\end_layout
+
+\begin_layout Standard
+max: [12.026 12.026 12.026 12.026 12.026 9.328214 12.026 ] 
+\end_layout
+
+\begin_layout Standard
+mean: [0.15058494 0.15107897 0.14720478 0.14581818 0.13989256 1.57461763 0.14989899]
+ 
+\end_layout
+
+\begin_layout Standard
+stand dev: [2.35593008 2.35617168 2.35941794 2.35919491 2.36020027 1.68586184
+ 2.35584499] 
+\end_layout
+
+\begin_layout Standard
+median: [0.241 0.241 0.241 0.238 0.234 1.00268 0.241 ]
+\end_layout
+
+\begin_layout Standard
+b) The coefficients for the logistic regression are below.
+ 
+\end_layout
+
+\begin_layout Standard
+[[ 5.37367327e-02 5.34098644e-03 -1.50782005e-02 5.70986281e-02 9.18621394e-02
+ 7.21885742e+00]]
+\end_layout
+
+\begin_layout Standard
+The logistic regression was performed with direction as the response and
+ the five lag variables plus volume as predictors.
+\end_layout
+
+\begin_layout Standard
+Used stats models API to obtain p values.
+ Lag 2 had a p value of 0.0296 which is lower than 0.05 so the null hypothesis
+ can be rejected.
+ Lag 2 does not influence direction.
+\end_layout
+
+\begin_layout Standard
+c) I first did logistic regression on the whole data set.
+ Then I computed the confusion matrix.
+ The confusion matrix resulted the following:
+\end_layout
+
+\begin_layout Standard
+[[482 2] 
+\end_layout
+
+\begin_layout Standard
+[0 605]]
+\end_layout
+
+\begin_layout Standard
+The model was very successful in predicting whether the data would go up
+ or down.
+ The model correctly predicted down every single time.
+ When predicting up, there were only two instances the model predicted wrong
+ of the 607 times.
+ Of all 1089 data points, just two where predicted wrong.
+\end_layout
+
+\begin_layout Standard
+d) Training data is 1990 to 2008 which is until row 986.
+\end_layout
+
+\begin_layout Standard
+I fitted a logistic regression using the training data.
+ I then computed the confusion matrix for the left out data (test data)
+ which was the data from 2009 and 2010.
+ The confusion matrix resulted the following:
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 as the only predictor 
+\end_layout
+
+\begin_layout Standard
+[[ 9 34] 
+\end_layout
+
+\begin_layout Standard
+[ 5 56]]
+\end_layout
+
+\begin_layout Standard
+Of the 104 data points from 2009 and 2010, 39 (37.5%) where incorrect.
+ 37.5% is the test error rate.
+ In this time period there were 61 ups and 43 downs.
+ Of the 61 ups, 5 were incorrect (8.2%).
+ Of the 43 downs, 34 where incorrect (79.1%).
+ 
+\end_layout
+
+\begin_layout Standard
+e, f, g, h, i) Doing d again but with LDA, QDA, KNN.
+ 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 as the only predictor but
+ instead used LDA 
+\end_layout
+
+\begin_layout Standard
+[[ 22 419]
+\end_layout
+
+\begin_layout Standard
+[ 20 524]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 as the only predictor but instead
+ used LDA 
+\end_layout
+
+\begin_layout Standard
+[[ 9 34] 
+\end_layout
+
+\begin_layout Standard
+[ 5 56]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 as the only predictor but
+ instead used QDA 
+\end_layout
+
+\begin_layout Standard
+[[ 0 441]
+\end_layout
+
+\begin_layout Standard
+[ 0 544]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 as the only predictor but instead
+ used QDA 
+\end_layout
+
+\begin_layout Standard
+[[ 0 43]
+\end_layout
+
+\begin_layout Standard
+[ 0 61]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 as the only predictor but
+ instead used NAIVE BAYES
+\end_layout
+
+\begin_layout Standard
+[[ 0 441]
+\end_layout
+
+\begin_layout Standard
+[ 0 544]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 as the only predictor but instead
+ used NAIVE BAYES
+\end_layout
+
+\begin_layout Standard
+[[ 0 43]
+\end_layout
+
+\begin_layout Standard
+[ 0 61]]
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 as the only predictor but
+ instead used KNN 
+\end_layout
+
+\begin_layout Standard
+[[298 143]
+\end_layout
+
+\begin_layout Standard
+[106 438]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 as the only predictor but instead
+ used KNN 
+\end_layout
+
+\begin_layout Standard
+[[16 27]
+\end_layout
+
+\begin_layout Standard
+[19 42]] 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error Rates (test data)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lag 2 Logi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LDA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QDA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAIVE BAYES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KNN (K=3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test Error Rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37.5%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37.5%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41.3%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41.3%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+44.2%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incorrectly Predicted Down
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+79.1% (34/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+79.1% (34/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100% (43/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100% (43/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+62.8% (27/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incorrectly Predicted Up
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.2 % (5/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.2 % (5/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0% (0/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0% (0/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+31.1% (19/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lag 2 Logi only had the lowest test error rate.
+ KNN was the best at predicting down.
+ QDA and NAIVE BAYES was best at picking up.
+\end_layout
+
+\begin_layout Standard
+j) I did some transformations.
+ These where using Lag 2 and 3 and changing KNN to K = 7.
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 and Lag3 as the only predictors
+ 
+\end_layout
+
+\begin_layout Standard
+[[ 23 418] 
+\end_layout
+
+\begin_layout Standard
+[ 23 521]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 and Lag 3 as the only predictor
+ 
+\end_layout
+
+\begin_layout Standard
+[[ 8 35]
+\end_layout
+
+\begin_layout Standard
+[ 4 57]]
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 and Lag3 as the only predictors
+ but instead used LDA 
+\end_layout
+
+\begin_layout Standard
+[[ 22 419] 
+\end_layout
+
+\begin_layout Standard
+[ 22 522]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 and Lag3 as the only predictors
+ but instead used LDA 
+\end_layout
+
+\begin_layout Standard
+[[ 8 35] 
+\end_layout
+
+\begin_layout Standard
+[ 4 57]]
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 and Lag 3 as the only predictors
+ but instead used QDA
+\end_layout
+
+\begin_layout Standard
+[[ 12 429]
+\end_layout
+
+\begin_layout Standard
+[ 13 531]]
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 and Lag3 as the only predictors
+ but instead used QDA 
+\end_layout
+
+\begin_layout Standard
+[[ 4 39] 
+\end_layout
+
+\begin_layout Standard
+[2 59]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 as the only predictor but
+ instead used NAIVE BAYES
+\end_layout
+
+\begin_layout Standard
+[[ 0 441]
+\end_layout
+
+\begin_layout Standard
+[ 0 544]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 as the only predictor but instead
+ used NAIVE BAYES
+\end_layout
+
+\begin_layout Standard
+[[ 0 43]
+\end_layout
+
+\begin_layout Standard
+[ 0 61]]
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the training data with Lag2 and Lag 3 as the only predictor
+ but instead used KNN 
+\end_layout
+
+\begin_layout Standard
+[[254 187] 
+\end_layout
+
+\begin_layout Standard
+[120 424]] 
+\end_layout
+
+\begin_layout Standard
+Confusion Matrix of the test data with Lag2 and Lag 3 as the only predictor
+ but instead used KNN [
+\end_layout
+
+\begin_layout Standard
+[11 32] 
+\end_layout
+
+\begin_layout Standard
+[17 44]] 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Error Rates (test data)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lag 2 and 3 Logi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+LDA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+QDA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NAIVE BAYES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+KNN (K=7)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Test Error Rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+39.4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+41.3%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47.1%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incorrectly Predicted Down
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+81.4% (35/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+81.4% (35/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+90.7% (39/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100% (43/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74.4% (32/43 wrong)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Incorrectly Predicted Up
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.3 % (4/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.3 % (4/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.3% (2/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0% (0/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+27.9% (17/61 wrong)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Problem 6 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 5, Exercise 2 (p.
+ 219).
+\end_layout
+
+\begin_layout Standard
+a) Let n be the number of observations.
+ The probability that the jth observation is in the bootstrap is 
+\begin_inset Formula $\frac{1}{n}$
+\end_inset
+
+so the probability the jth observation is not in the probability is 
+\begin_inset Formula $1-\frac{1}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+b) Each bootstrap is independent.
+ So the probability that the jth observation is not in the second is the
+ same: 
+\begin_inset Formula $1-\frac{1}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+c) Bootstrapping has sample with replacement and is independent.
+ The probability that the jth observation is not in a observation is 
+\begin_inset Formula $1-\frac{1}{n}$
+\end_inset
+
+.
+ The probability that the jth observation is not in the bootstrap sample
+ is the product of this.
+ So it becomes 
+\begin_inset Formula $(1-\frac{1}{n})\times(1-\frac{1}{n})\times\dots=(1-\frac{1}{n})^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d) n =5, finding if the jth observation is in the bootstrap.
+ 
+\end_layout
+
+\begin_layout Standard
+P(observation in the bootstrap) = 1 - P(observation is not in the bootstrap)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1-(1-\frac{1}{5})^{5}=0.67$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e) Same as above but now n = 100
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1-(1-\frac{1}{100})^{100}=0.63$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+f) Same as above but now n = 10000
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1-(1-\frac{1}{10000})^{10000}=0.63$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+g) Note: For the graph I did n = 20,000 because when I did n = 100,000 my
+ computer crashed and above 30,000 it was taking a very long time for the
+ graph to load.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw2stats202/hw2img/ch5p2.png
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Probability of Jth Observation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The graph asymptotes around 0.63
+\end_layout
+
+\begin_layout Standard
+h) As 
+\begin_inset Formula $n->\infty,p=0.632$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Problem 7 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 5, Exercise 5 (p.
+ 220).
+\end_layout
+
+\begin_layout Standard
+a) The coefficients for income and balance fit using logistic regression
+ to predict default are:
+\end_layout
+
+\begin_layout Standard
+[[5.64710797e-03, 
+\end_layout
+
+\begin_layout Standard
+2.08091984e-05]] 
+\end_layout
+
+\begin_layout Standard
+b) 1) Did split into test and validation set.
+ The data was split with 5000 observations in each set.
+\end_layout
+
+\begin_layout Standard
+2) Fitted a multi logistic model.
+ Coefficients are:
+\end_layout
+
+\begin_layout Standard
+[[ 0.00041108
+\end_layout
+
+\begin_layout Standard
+-0.00012325]] 
+\end_layout
+
+\begin_layout Standard
+3) Classified using posterior probability
+\end_layout
+
+\begin_layout Standard
+4) Computed the validation set error.
+ The confusion matrix was: 
+\end_layout
+
+\begin_layout Standard
+[[4996 1]
+\end_layout
+
+\begin_layout Standard
+[ 3 0]]
+\end_layout
+
+\begin_layout Standard
+The error for the validation set is 0.08%
+\end_layout
+
+\begin_layout Standard
+c) 1) Did split into test and validation set.
+ The data was split with 7500 observations in the training set and 2500
+ observations in the validation set.
+\end_layout
+
+\begin_layout Standard
+2) Fitted a multi logistic model.Coefficients are:
+\end_layout
+
+\begin_layout Standard
+[[5.79458398e-03 
+\end_layout
+
+\begin_layout Standard
+2.30839912e-05]] 
+\end_layout
+
+\begin_layout Standard
+3) Classified using posterior probability
+\end_layout
+
+\begin_layout Standard
+4) Computed the validation set error.
+ The confusion matrix was:
+\end_layout
+
+\begin_layout Standard
+[[7275 107] 
+\end_layout
+
+\begin_layout Standard
+[ 112 6]] 
+\end_layout
+
+\begin_layout Standard
+The error for the validation set is 2.2%
+\end_layout
+
+\begin_layout Standard
+5) Did split into test and validation set.
+ The data was split with 2500 observations in the training set and 7500
+ observations in the validation set.
+\end_layout
+
+\begin_layout Standard
+6) Fitted a multi logistic model.
+ Coefficients are:
+\end_layout
+
+\begin_layout Standard
+[[ 0.00043135 
+\end_layout
+
+\begin_layout Standard
+-0.00012144]] 
+\end_layout
+
+\begin_layout Standard
+7) Classified using posterior probability
+\end_layout
+
+\begin_layout Standard
+8) Computed the validation set error.
+ The confusion matrix was:
+\end_layout
+
+\begin_layout Standard
+[[2499 0] 
+\end_layout
+
+\begin_layout Standard
+[ 1 0]] 
+\end_layout
+
+\begin_layout Standard
+The error for the validation set is 0.04%
+\end_layout
+
+\begin_layout Standard
+9) Did split into test and validation set.
+ The data was split with 6000 observations in the training set and 4000
+ observations in the validation set.
+\end_layout
+
+\begin_layout Standard
+10) Fitted a multi logistic model.
+ Coefficients are:
+\end_layout
+
+\begin_layout Standard
+[[5.95395704e-03 
+\end_layout
+
+\begin_layout Standard
+3.26622332e-05]] 
+\end_layout
+
+\begin_layout Standard
+11) Classified using posterior probability
+\end_layout
+
+\begin_layout Standard
+12) Computed the validation set error.
+ The confusion matrix was:
+\end_layout
+
+\begin_layout Standard
+[[3872 65] 
+\end_layout
+
+\begin_layout Standard
+[ 61 2]]
+\end_layout
+
+\begin_layout Standard
+The error for the validation set is 3.2%
+\end_layout
+
+\begin_layout Standard
+d) I used a list comprehension to switch the 
+\begin_inset Quotes eld
+\end_inset
+
+yes
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+no
+\begin_inset Quotes erd
+\end_inset
+
+ to 1 and 0.
+ Then added it to the array.
+ Then computed the logistic regression and made a confusion matrix of the
+ validation set.
+ The results are below:
+\end_layout
+
+\begin_layout Standard
+[[4996 1]
+\end_layout
+
+\begin_layout Standard
+[ 3 0]] 
+\end_layout
+
+\begin_layout Standard
+The error for the validation set is 0.08%
+\end_layout
+
+\begin_layout Standard
+Adding a dummy variable, student, did not result in an increase or decrease
+ in the error rate.
+\end_layout
+
+\begin_layout Standard
+Problem 8 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 5, Exercise 6 (p.
+ 221).
+\end_layout
+
+\begin_layout Standard
+a) The standard error for the coefficients balance, income and intercept
+ are as follows.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cc}
+Name & Standard\,Error\,for\,the\,coefficients\\
+balance & 0\\
+income & 4.99e-06\\
+intercept & 0.435
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) See code
+\end_layout
+
+\begin_layout Standard
+c,d) The standard error was 3.804649256670676.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem 9 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 5, Exercise 8 (p.
+ 222).
+\end_layout
+
+\begin_layout Standard
+a) In this problem n = 100 and p = 2.
+ The model in this problem is 
+\begin_inset Formula $Y=X-2X^{2}+constant$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) See scatter plot.
+ The scatter plot has a upside down parabolic shape.
+ Most of the points occur at the top of the curve.
+ 
+\end_layout
+
+\begin_layout Standard
+c, d ,e)
+\end_layout
+
+\begin_layout Standard
+I first fitted these 4 models using linear algebra and coding it.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cc}
+i & Y=\beta_{0}+\beta_{1}X+\epsilon\\
+ii & Y=\beta_{0}+\beta_{1}X+\beta_{2}X^{2}+\epsilon\\
+iii & Y=\beta_{0}+\beta_{1}X+\beta_{2}X^{2}+\beta_{3}X^{3}+\epsilon\\
+iv & Y=\beta_{0}+\beta_{1}X+\beta_{2}X^{2}+\beta_{3}X^{3}+\beta_{4}X^{4}+\epsilon
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The seed was set to 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $rng=np.random.default_{r}ng(1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The resulting coefficients for the models are as follows: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccccc}
+ & \beta_{0} & \beta_{1} & \beta_{2} & \beta_{3} & \beta_{4}\\
+i & -1.46496301 & 1.94936857\\
+ii & -0.07275529 & 0.96627276 & -2.00470902\\
+iii & -0.05719669 & 1.1145842 & -2.04709357 & -0.06430033\\
+iv & 0.10084766 & 0.90499786 & -2.50592308 & 0.03376837 & 0.10421699
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I then used LOOCV to help fit the models.
+ The coefficients for each of the models that produced the lowest MSE are
+ as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{ccccccc}
+ & \beta_{0} & \beta_{1} & \beta_{2} & \beta_{3} & \beta_{4} & Error\\
+i & -1.46518099 & 1.94913361 &  &  &  & 5.9226536056081205\\
+ii & -0.0726598 & 0.96615516 & -2.00472843 &  &  & 0.9834354527808048\\
+iii & -0.05737607 & 1.11461298 & -2.04701671 & -0.06429704 &  & 0.9718403920130584\\
+iv & 0.10079418 & 0.90506572 & -2.50587159 & 0.03374964 & 0.10420779 & 0.9201948751940691
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Changed the seed to 100.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $rng=np.random.default_{r}ng(100)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The resulting coefficients for the models are as follows: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccccc}
+ & \beta_{0} & \beta_{1} & \beta_{2} & \beta_{3} & \beta_{4}\\
+i & -1.69029473 & 0.50898235\\
+ii & 0.13096828 & 0.77172222 & -1.94030595\\
+iii & 0.15961224 & 0.46259444 & 0.46259444 & 0.13689711\\
+iv & 0.07938098 & 0.41879764 & -1.75905017 & 0.16392833 & -0.06110937
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I then used LOOCV to help fit the models.
+ The coefficients for each of the models that produced the lowest MSE are
+ as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{ccccccc}
+ & \beta_{0} & \beta_{1} & \beta_{2} & \beta_{3} & \beta_{4} & Error\\
+i & -1.69066004 & 0.50920579 &  &  &  & 5.790791169159457\\
+ii & 0.13115837 & 0.7717761 & -1.94038458 &  &  & 1.0288896723158567\\
+iii & 0.15971326 & 0.46265244 & -1.98187348 & 0.13688155 &  & 0.994999233705984\\
+iv & 0.07952053 & 0.41882023 & -1.75921296 & 0.16391697 & -0.0610765 & 0.9864312854873168
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In both seeds model 
+\begin_inset Formula $iv:Y=\beta_{0}+\beta_{1}X+\beta_{2}X^{2}+\beta_{3}X^{3}+\beta_{4}X^{4}+\epsilon$
+\end_inset
+
+ had the lowest LOOCV.
+ I had mostly expected it as I thought the error would decrease but 
+\begin_inset Formula $iv$
+\end_inset
+
+ would over fit because we knew what the true function was.
+ I had expected that 
+\begin_inset Formula $ii$
+\end_inset
+
+ would have the lower error because it has the same polynomial type as the
+ true function but 
+\begin_inset Formula $iv$
+\end_inset
+
+ does have a lower error it just over fits the data.
+\end_layout
+
+\begin_layout Standard
+f) The coefficients for 
+\begin_inset Formula $\beta_{0},\beta_{1},\beta_{2}$
+\end_inset
+
+ all have p values less than 0.05.
+ This means that these coefficients significantly help predict y.
+ This is what should happen because the original function is a quadratic.
+\end_layout
+
+\begin_layout Standard
+Problem 10 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 5, Exercise 9 (p.
+ 223).
+\end_layout
+
+\begin_layout Standard
+a) The population mean: 
+\begin_inset Formula $\hat{\mu}=22.53$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) The standard error of the population mean 
+\begin_inset Formula $0.408$
+\end_inset
+
+.
+ On average the mean of the population will be off from the population mean
+ by 
+\begin_inset Formula $0.408$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+c) Using bootstrap I got a standard error of 
+\begin_inset Formula $0.4018559$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d) Con Int: [21.752012851895014, 23.31359979632634 
+\end_layout
+
+\begin_layout Standard
+e) 
+\begin_inset Formula $\hat{\mu_{med}}=21.2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+f) Standard Error of Median 0.36652890745478695 
+\end_layout
+
+\begin_layout Standard
+g,h) Tenth Percentile (µ̂0.1) of medv: 12.75 with an error of 0.49.
+ This shows how much the 10 percentile median would be off by on average.
+ 
+\end_layout
+
+\end_body
+\end_document

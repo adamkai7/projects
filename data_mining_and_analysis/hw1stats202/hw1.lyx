@@ -1,0 +1,483 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.5in
+\topmargin 0.5in
+\rightmargin 0.5in
+\bottommargin 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+STATS 202: Data Mining and Analysis
+\end_layout
+
+\begin_layout Author
+Instructor: Linh Tran 
+\end_layout
+
+\begin_layout Author
+Homework #1
+\end_layout
+
+\begin_layout Author
+Due Date: July 7, 2023
+\end_layout
+
+\begin_layout Author
+Stanford University 
+\end_layout
+
+\begin_layout Author
+Adam Kainikara 
+\end_layout
+
+\begin_layout Standard
+Problem 1 (4 Points)
+\end_layout
+
+\begin_layout Standard
+Chapter 2, Exercise 2 (p.
+ 52).
+\end_layout
+
+\begin_layout Standard
+a) This problem is a regression problem as our output variable is quantitative
+ and continuous.
+ The output variable is the CEO's salary we are investigating which factors
+ affect the CEO's salary.
+ In this problem we are more interested in inference.
+ Inference problems are those where we are interested in understanding how
+ differences in variables might affect Y.
+ Prediction problems involve using the variables to help predict Y, when
+ we can not obtain Y.
+ In this problem we have variables such as CEO salary, profit and number
+ of employees, and we aim at determining how these variables affect the
+ output variable, CEO salary, rather than trying to predict what the CEO's
+ salary is.
+ In this problem n = 500 and p = 3 because n is the number of observations
+ and p is the number of variables.
+ We have 500 observations because we asked 500 firms and 3 variables because
+ we record profit, number of employees, and industry.
+ 
+\end_layout
+
+\begin_layout Standard
+b) This problem is a classification problem as our output variables, success
+ or failure is qualitative and discrete.
+ This problem is a prediction problem as we are using many variables from
+ similar products such as price charged for a product and marketing budget
+ to predict whether a new product would succeed or fail.
+ In this problem n = 20 and p = 13 because we looked at 20 different observation
+s (products) and looked at 13 variables including price of the product and
+ marketing budget.
+\end_layout
+
+\begin_layout Standard
+c) This problem is a regression problem as our output variable, % change
+ in USD/Euro exchange rate, is quantitative and conitunious.
+ The problem is a prediciton problem as we are using multiple different
+ market's data (variables) to help us predict the % change in USD/Euro exchange
+ rate.
+ In this problem n = 52 and p = 3 because the problem states that we took
+ weekly data and collected data from 3 different markets.
+\end_layout
+
+\begin_layout Standard
+Problem 2 (4 Points)
+\end_layout
+
+\begin_layout Standard
+Chapter 2, Exercise 3 (p.
+ 53).
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a) See inserted graph Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bbb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1img/foo.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+bbb
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bbb"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1img/foo.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+ccc
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ccc"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) Training error decreases as flexibility increases because flexibility
+ enables the function to be fitted more accuratley.
+ With more data fitted, the mean square error decreases as flexibility increases.
+ Irreducible error is a flat line because that will never go away and is
+ a constant ammount.
+ As flexbility increases variance increases and bias decreases.
+ This relationship can be seen through bias variance trade off.
+\end_layout
+
+\begin_layout Standard
+INSERT CURVE WHEN I FINISH IT
+\end_layout
+
+\begin_layout Standard
+Problem 3 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 2, Exercise 7 (p.
+ 54).
+\end_layout
+
+\begin_layout Standard
+a) The Euclidean distance can be found by square rooting the sum of the
+ differences between each component of the observations and test point.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccccc}
+Obs. & X1 & X2 & X3 & Y & Euclidean\,Distance\\
+1 & 0 & 3 & 0 & Red & \text{\ensuremath{\sqrt{(0-0)^{2}+(3-0)^{2}+(0-0)^{2}}=3}}\\
+2 & 2 & 0 & 0 & Red & \text{\ensuremath{\sqrt{(2-0)^{2}+(0-0)^{2}+(0-0)^{2}}=2}}\\
+3 & 0 & 1 & 3 & Red & \text{\ensuremath{\sqrt{(0-0)^{2}+(1-0)^{2}+(3-0)^{2}}=3.2}}\\
+4 & 0 & 1 & 2 & Green & \text{\ensuremath{\sqrt{(0-0)^{2}+(1-0)^{2}+(2-0)^{2}}=2.2}}\\
+5 & -1 & 0 & 1 & Green & \text{\ensuremath{\sqrt{(-1-0)^{2}+(0-0)^{2}+(1-0)^{2}}=1.4}}\\
+6 & 1 & 1 & 1 & Red & \text{\ensuremath{\sqrt{(1-0)^{2}+(1-0)^{2}+(1-0)^{2}}=1.7}}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) This is computing k-nearest neighbors to the test point (0,0,0) with
+ k = 1.
+ The nearest observation to the test point is observation 5 which has a
+ Euclidean distance of about 1.4.
+ Because observation 5 is green, we predict that the test point will be
+ green.
+\end_layout
+
+\begin_layout Standard
+c) This is computing k-nearest neighbors to the test point (0,0,0) with
+ k = 3.
+ The three nearest observations to the test point are observations 5, 6,
+ and 2.
+ These 3 observations have a Euclidean distance of about 1.4, 1.7, and 2.2
+ respectively.
+ Observation 5 is green while observations 2 and 6 are red.
+ Because red is the majority, we predict that the test point will be red.
+\end_layout
+
+\begin_layout Standard
+d) The best value for K in this problem would be small.
+ This is because of the decision boundry is non linear.
+ For example if the decision boundry was very curvy the graph would show
+ alot of variance.
+ Due to the high variance, a small value of K would be best for this problem.
+\end_layout
+
+\begin_layout Standard
+Problem 4 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 1 (p.
+ 548).
+\end_layout
+
+\begin_layout Standard
+a) I DONT KNOW HOW TO PROVE IT
+\end_layout
+
+\begin_layout Standard
+b) Objective 12.17 aims at minimizing the average squared distance between
+ each observation.
+ K means clustering algortithim uses a repetive process of computing and
+ moving the cluster centroid and assigning each observation to a cluster
+ based on distance until the centroids of new clusters are not changing.
+ The process of changing the centorid reduces g the distance between each
+ observation in the cluster and the centroid.
+ K means clustering algorithim decreases Objective 12.17 in each interation.
+ In the first step of each itteration, the relocation of the centorid reduces
+ the sum of the distances for each point, and the mean.
+ Doing this process over and over can only reduce the distances.
+ 
+\end_layout
+
+\begin_layout Standard
+Each itteration, the centroid of each cluster moves to the mean postion
+ of all observations in the cluster.
+ The next step involves relocating observations to the closest centroid
+ which reduces the mean squared value.
+\end_layout
+
+\begin_layout Standard
+Problem 5 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 2 (p.
+ 548).
+\end_layout
+
+\begin_layout Standard
+See attached page
+\end_layout
+
+\begin_layout Standard
+Problem 6 (4 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 4 (p.
+ 549).
+\end_layout
+
+\begin_layout Standard
+a) Complete linkage uses the farthest two data points and single linkage
+ uses the two closest data points.
+ Due to complete linkage using the farthest distance, the fusion would generaly
+ occur higher on the tree while single linkage would occur lower on the
+ tree.
+ If the distances between the two clusters were the same, it is possible
+ that the fusions would occur at the same point.
+ Because the distance information is not provided, there is not enough informati
+on to tell which fusion would occur higher on the tree.
+\end_layout
+
+\begin_layout Standard
+b) Because there are only two points 5 and 6, the type of linkage (single
+ or compelte) is not relevant to this problem.
+ The height will be the same.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem 7 (4 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 9 (p.
+ 550).
+\end_layout
+
+\begin_layout Standard
+DATA SET QUESTION USE CODING LATER
+\end_layout
+
+\begin_layout Standard
+Problem 8 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 3, Exercise 4 (p.
+ 122).
+\end_layout
+
+\begin_layout Standard
+a) Referencing sketch of error valye and flexibility in problem 2 part 'a'.
+ For training data, as flexibility increases residual sum of squares (RSS)
+ decreases.
+ A cubic model is more flexibile than a linear model.
+ So RSS is smaller for a cubic model than a linear model.
+ For this problem, we would expect the RSS to be lower for a cubic model.
+ 
+\end_layout
+
+\begin_layout Standard
+b) The cubic model would have a higher RSS than a linear model when using
+ test data.
+ The cubic model would be over fitting and lead to higher error.
+ 
+\end_layout
+
+\begin_layout Standard
+c) The same answer from 'a' would apply.
+ For training data, a more flexibile model such as the cubic model would
+ have a lower RSS than a less flexible model like the linear model even
+ if the true relationship between X and Y is unknown.
+\end_layout
+
+\begin_layout Standard
+d) Determing wheter to use a cubic model or a linear model for this would
+ be quite diffiuclt as we do not know how far the relationship between X
+ and Y is from being linear.
+ If the relationship is very far from linear the cubic model would work
+ better.
+ If the relationship is quite close from linear a linear model would work
+ better 
+\end_layout
+
+\end_body
+\end_document

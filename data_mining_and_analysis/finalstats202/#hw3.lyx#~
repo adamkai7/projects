@@ -1,0 +1,681 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+STATS 202: Data Mining and Analysis Homework #3
+\end_layout
+
+\begin_layout Author
+Instructor: Linh Tran 
+\end_layout
+
+\begin_layout Author
+Homework #3
+\end_layout
+
+\begin_layout Author
+Due Date: August 2, 2023
+\end_layout
+
+\begin_layout Author
+Stanford University 
+\end_layout
+
+\begin_layout Author
+Adam Kainikara 
+\end_layout
+
+\begin_layout Standard
+Problem 1 (7 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 6, Exercise 3 (p.
+ 283).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Sigma_{i=1}^{n}(y_{i}-\beta_{0}-\Sigma_{j=1}^{p}\beta_{j}x_{ij})^{2}$
+\end_inset
+
+ subject to 
+\begin_inset Formula $\Sigma_{j=1}^{p}|\beta|≤s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The left square part is RSS
+\end_layout
+
+\begin_layout Standard
+a) 
+\begin_inset Formula $(iv)$
+\end_inset
+
+ As we increase 
+\begin_inset Formula $s$
+\end_inset
+
+ from 
+\begin_inset Formula $0$
+\end_inset
+
+ the training RSS will steadily increase.
+ Increasing 
+\begin_inset Formula $s$
+\end_inset
+
+ makes us restric the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (coefficents) less and less.
+ By restricting coefficentnts less, the model will become more flexible.
+ When the model becomes more flexible the training RSS will decrease.
+\end_layout
+
+\begin_layout Standard
+b) 
+\begin_inset Formula $(ii)$
+\end_inset
+
+ As we increase 
+\begin_inset Formula $s$
+\end_inset
+
+ from 
+\begin_inset Formula $0$
+\end_inset
+
+ the test RSS would at first decreaase but then slowly start increasing
+ aand would form a 
+\begin_inset Formula $U$
+\end_inset
+
+ shape.
+ Increasing s makes us restric the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (coefficents) less and less.
+ By restricting coefficents less, the model will become more flexible.
+ However at some point on test data, the RSS will once again increase.
+\end_layout
+
+\begin_layout Standard
+c) 
+\begin_inset Formula $(iii)$
+\end_inset
+
+ As we increase 
+\begin_inset Formula $s$
+\end_inset
+
+ from 0, variance would steadily increase.
+ Increasing 
+\begin_inset Formula $s$
+\end_inset
+
+ makes us restric the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (coefficents) less and less.
+ By restricting coefficents less, the model becomes more flexible.
+ As flexibility increases, variance increases.
+ This effect is like the bias variance trade off graph.
+ 
+\end_layout
+
+\begin_layout Standard
+d) 
+\begin_inset Formula $(iv)$
+\end_inset
+
+ As we increase 
+\begin_inset Formula $s$
+\end_inset
+
+ from 0, squared bias would steadilt decrease.
+ Increasing 
+\begin_inset Formula $s$
+\end_inset
+
+ makes us restrict the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ (coefficents) less and less.
+ By restricting coefficents less, the model becomes more flexible.
+ As flexibility increases, squared bias decreases.
+ This effect is like the bias variance trade off graph.
+\end_layout
+
+\begin_layout Standard
+e) 
+\begin_inset Formula $(v)$
+\end_inset
+
+ As we increasae 
+\begin_inset Formula $s$
+\end_inset
+
+ from 0, the irriducible error would stay the same.
+ Irrediucible error is always there and does not come from the fitted model.
+ So changing the flexibility of the model will have no impact.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem 2 (7 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 6, Exercise 4 (p.
+ 284).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Sigma_{i=1}^{n}(y_{i}-\beta_{0}-\Sigma_{j=1}^{p}\beta_{j}x_{ij})^{2}+\lambda\Sigma_{j=1}^{p}\beta_{j}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ridge?
+\end_layout
+
+\begin_layout Standard
+a) As we increase 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ from 0 the training RSS will increase.
+ Increasing 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ increases the penalty term.
+ With the penality increasing and becoming more significant, the coefficents
+ decrease.
+ This leads to more error.
+\end_layout
+
+\begin_layout Standard
+b) Initialy, increasing λ shrinks the coefficients.
+ So as it intially increases RSS will decrease since overfitting is reduced.
+ However, if we continue to increase λ, the model may become too simple
+ (due to smaller coefficents) and start to underfit, leading to an increase
+ in the test RSS.
+\end_layout
+
+\begin_layout Standard
+c) As we increase 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ from 0 the variance will increase.
+ With the coefficetns changing as 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ increases, the variability between how well the models can fit increases
+ which increases the variance.
+\end_layout
+
+\begin_layout Standard
+d) As we increases 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ the bias will decrease 
+\end_layout
+
+\begin_layout Standard
+Same thing as above
+\end_layout
+
+\begin_layout Standard
+Problem 3 (7 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 6, Exercise 9 (p.
+ 286).
+ Don’t do parts (e), (f), and (g).
+ 
+\end_layout
+
+\begin_layout Standard
+a) Split the data into a 75% training and 25% test.
+\end_layout
+
+\begin_layout Standard
+b) Fit a linear model.
+ Got a MSE for linear model of 1503017.4360986822 and a r squared value of
+ 0.9134874545115684 
+\end_layout
+
+\begin_layout Standard
+c) Fit a ridge model.
+ Got a MSE of 1502973.7121541149 and a r squared value of 0.9134921934779143.
+\end_layout
+
+\begin_layout Standard
+d) Fit a lasso model.
+ Got a MSE of 35152969.33526452 and 9 non zero coeffcnets 
+\end_layout
+
+\begin_layout Standard
+Coding question 
+\end_layout
+
+\begin_layout Standard
+Problem 4 (7 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 7, Exercise 1 (p.
+ 321).
+\end_layout
+
+\begin_layout Standard
+a) We are given that 
+\begin_inset Formula $f(x)=\beta_{o}+\beta_{1}x+\beta_{2}x^{2}+\beta_{3}x^{3}+\beta^{4}(x-\xi)^{3}+$
+\end_inset
+
+ where 
+\begin_inset Formula $(x-\xi)^{3}$
+\end_inset
+
+ is its normal polynomial self if 
+\begin_inset Formula $x\geq\xi$
+\end_inset
+
+ and is 
+\begin_inset Formula $0$
+\end_inset
+
+ otherwise
+\end_layout
+
+\begin_layout Standard
+We are also given that 
+\begin_inset Formula $f_{1}(x)=a_{1}+b_{1}x+c_{1}x^{2}+d_{1}x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We want to find the polynomial and coefficents such that 
+\begin_inset Formula $f(x)=f_{1}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In part 'a' it is given that 
+\begin_inset Formula $x\leq\xi$
+\end_inset
+
+ and because of this 
+\begin_inset Formula $f(x)=\beta_{o}+\beta_{1}x+\beta_{2}x^{2}+\beta_{3}x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So in order for 
+\begin_inset Formula $f(x)=f_{1}(x)$
+\end_inset
+
+ to be true the coefficents are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{1}=\beta_{0},b_{1}=\beta_{1},c_{1}=\beta_{2},d_{1}=\beta_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) Now given 
+\begin_inset Formula $f_{2}(x)=a_{2}+b_{2}x+c_{2}x^{2}+d_{2}x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In part 'b' it is given that 
+\begin_inset Formula $x\geq\xi$
+\end_inset
+
+ so 
+\begin_inset Formula $f(x)=\beta_{o}+\beta_{1}x+\beta_{2}x^{2}+\beta_{3}x^{3}+\beta_{4}(x-\xi)^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\beta_{o}+\beta_{1}x+\beta_{2}x^{2}+\beta_{3}x^{3}+\beta_{4}(x^{3}-3x^{2}\xi+3x\xi^{2}-\xi^{3})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multiply out 
+\begin_inset Formula $\beta_{4}$
+\end_inset
+
+ and rearange the equation to follow the form of 
+\begin_inset Formula $f_{2}(x)\,ie:x^{0},x^{1},x^{2}\dots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\beta_{0}-\beta_{4}\xi^{3})+(\beta_{1}+3\beta_{4}\xi^{2})x+(\beta_{2}-3\beta_{4}\xi)x^{2}+(\beta_{3}+\beta_{4})x^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order for 
+\begin_inset Formula $f(x)=f_{2}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{2}=\beta_{0}-\beta_{4}\xi^{3},b_{2}=\beta_{1}+3\beta_{4}\xi^{2},c_{2}=\beta_{2}-3\beta_{4}\xi,d_{2}=\beta_{3}+\beta_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+c) Show
+\begin_inset Formula $f_{1}(\xi)=f_{2}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{1}(\xi)=\beta_{0}+\beta_{1}\xi+\beta_{2}\xi^{2}+\beta_{3}\xi^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{2}(\xi)=(\beta_{0}-\beta_{4}\xi^{3})+(\beta_{1}+3\beta_{4}\xi^{2})\xi+(\beta_{2}-3\beta_{4}\xi)\xi^{2}+(\beta_{3}+\beta_{4})\xi^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta_{0}+\beta_{1}\xi+\beta_{2}\xi^{2}+\beta_{3}\xi^{3}=(\beta_{0}-\beta_{4}\xi^{3})+(\beta_{1}+3\beta_{4}\xi^{2})\xi+(\beta_{2}-3\beta_{4}\xi)\xi^{2}+(\beta_{3}+\beta_{4})\xi^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\beta_{0}+\beta_{1}\xi+\beta_{2}\xi^{2}+\beta_{3}\xi^{3}=\beta_{0}-\beta_{4}\xi^{3}+\beta_{1}\xi+3\beta_{4}\xi^{3}+\beta_{2}\xi^{2}-3\beta_{4}\xi^{3}+\beta_{3}\xi^{3}+\beta_{4}\xi^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta_{0}+\beta_{1}\xi+\beta_{2}\xi^{2}+\beta_{3}\xi^{3}=\beta_{0}+\beta_{1}\xi+\beta_{2}\xi^{2}+\beta_{3}\xi^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d)
+\begin_inset Formula $Show:f_{1}^{\prime}(\xi)=f_{2}^{\prime}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{1}^{\prime}(\xi)=\beta_{1}+2\beta_{2}\xi+3\beta_{3}\xi^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{2}^{\prime}(\xi)=-3\beta_{4}\xi^{3}+\beta_{1}+9\beta_{4}\xi^{2}+2\beta_{2}\xi-9\beta_{4}\xi^{2}+3\beta_{3}\xi^{2}+3\beta_{4}\xi^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{2}^{\prime}(\xi)=\beta_{1}+2\beta_{2}\xi+3\beta_{3}\xi^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therfore 
+\begin_inset Formula $f_{1}^{\prime}(\xi)=f_{2}^{\prime}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e)
+\begin_inset Formula $Show:f_{1}^{\prime\prime}(\xi)=f_{2}^{\prime\prime}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{1}^{\prime\prime}(\xi)=2\beta_{2}+6\beta_{3}\xi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{2}^{\prime\prime}(\xi)=2\beta_{2}+6\beta_{3}\xi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore 
+\begin_inset Formula $f_{1}^{\prime\prime}(\xi)=f_{2}^{\prime\prime}(\xi)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cubic spline kinda solve one 
+\end_layout
+
+\begin_layout Standard
+Problem 5 (7 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 7, Exercise 8 (p.
+ 324).
+ Find at least one non-linear estimate which does better than linear regression,
+ and justify this using a t-test or by showing an improvement in the cross-valid
+ation error with respect to a linear model.
+ You must also produce a plot of the predictor X vs.
+ the non-linear estimate fˆ(X).
+\end_layout
+
+\begin_layout Standard
+Kinda coding question, fit a model get a p value
+\end_layout
+
+\begin_layout Standard
+Problem 6 (7 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 9, Exercise 1 (p.
+ 398).
+ 
+\end_layout
+
+\begin_layout Standard
+Drawing a hyper plane
+\end_layout
+
+\begin_layout Standard
+Problem 7 (8 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 9, Exercise 8 (p.
+ 401).
+\end_layout
+
+\begin_layout Standard
+Fitted a support vector classifier to the training data using C = 0.01, with
+ Purchase as the response and the other variablesas predictors.
+ There were 612 support points.
+ Training accuracy score of 0.38249999999999995 and test accuracy score of
+ 0.4111111111111111 0.1 Fitted a support vector classifier to the training
+ data using the best C = 0.1, and got Training accuracy score of 0.382499999999999
+95 and test accuracy score of 0.4111111111111111 Fitted a support vector
+ classifier to the training data using C = 0.01, with Purchase as the response
+ and the other variablesas predictors.
+ Used radial.
+ There were 612 support points.
+ Training accuracy score using radial is 0.38249999999999995 and test accuracy
+ score of 0.4111111111111111 Fitted a support vector classifier to the training
+ data using the best C = 0.01 with radial, and got Training accuracy score
+ of 0.38249999999999995 and test accuracy score of 0.4111111111111111 Fitted
+ a support vector classifier to the training data using C = 0.01, with Purchase
+ as the response and the other variablesas predictors.
+ Used poly.
+ There were 612 support points.
+ Training accuracy score using radial is 0.38249999999999995 and test accuracy
+ score of 0.4111111111111111 Fitted a support vector classifier to the training
+ data using the best C = 0.01 with poly, and got Training accuracy score
+ of 0.38249999999999995 and test accuracy score of 0.4111111111111111 
+\end_layout
+
+\begin_layout Standard
+Vector 
+\end_layout
+
+\end_body
+\end_document

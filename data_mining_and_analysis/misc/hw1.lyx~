@@ -1,0 +1,1347 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.5in
+\topmargin 0.5in
+\rightmargin 0.5in
+\bottommargin 0.5in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+STATS 202: Data Mining and Analysis Homework #1
+\end_layout
+
+\begin_layout Author
+Instructor: Linh Tran 
+\end_layout
+
+\begin_layout Author
+Homework #1
+\end_layout
+
+\begin_layout Author
+Due Date: July 7, 2023
+\end_layout
+
+\begin_layout Author
+Stanford University 
+\end_layout
+
+\begin_layout Author
+Adam Kainikara 
+\end_layout
+
+\begin_layout Standard
+Problem 1 (4 Points)
+\end_layout
+
+\begin_layout Standard
+Chapter 2, Exercise 2 (p.
+ 52).
+\end_layout
+
+\begin_layout Standard
+a) This problem is a regression problem as our output variable is quantitative
+ and continuous.
+ The output variable is the CEO's salary we are investigating which factors
+ affect the CEO's salary.
+ In this problem we are more interested in inference.
+ Inference problems are those where we are interested in understanding how
+ differences in variables might affect Y.
+ Prediction problems involve using the variables to help predict Y, when
+ we can not obtain Y.
+ In this problem we have variables such as CEO salary, profit and number
+ of employees, and we aim at determining how these variables affect the
+ output variable, CEO salary, rather than trying to predict what the CEO's
+ salary is.
+ In this problem n = 500 and p = 3 because n is the number of observations
+ and p is the number of variables.
+ We have 500 observations because we asked 500 firms and 3 variables because
+ we record profit, number of employees, and industry.
+ 
+\end_layout
+
+\begin_layout Standard
+b) This problem is a classification problem as our output variables, success
+ or failure is qualitative and discrete.
+ This problem is a prediction problem as we are using many variables from
+ similar products such as price charged for a product and marketing budget
+ to predict whether a new product would succeed or fail.
+ In this problem n = 20 and p = 13 because we looked at 20 different observation
+s (products) and looked at 13 variables including price of the product and
+ marketing budget.
+\end_layout
+
+\begin_layout Standard
+c) This problem is a regression problem as our output variable, % change
+ in USD/Euro exchange rate, is quantitative and constitution.
+ The problem is a prediction problem as we are using multiple different
+ market's data (variables) to help us predict the % change in USD/Euro exchange
+ rate.
+ In this problem n = 52 and p = 3 because the problem states that we took
+ weekly data and collected data from 3 different markets.
+\end_layout
+
+\begin_layout Standard
+Problem 2 (4 Points)
+\end_layout
+
+\begin_layout Standard
+Chapter 2, Exercise 3 (p.
+ 53).
+\end_layout
+
+\begin_layout Standard
+a) See inserted graph Figure 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1stats202/hw1img/foo.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Variance, Squared Bias, Training Error, Test Error, Irreducible Error: Problem
+ 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) Training error decreases as flexibility increases because flexibility
+ enables the function to be fitted more accurately.
+ With more data fitted, the mean square error decreases as flexibility increases.
+ Irreducible error is a flat line because that will never go away and is
+ a constant amount.
+ As flexibility increases variance increases and bias decreases.
+ This relationship can be seen through bias variance trade off.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+Problem 3 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 2, Exercise 7 (p.
+ 54).
+\end_layout
+
+\begin_layout Standard
+a) The Euclidean distance can be found by square rooting the sum of the
+ differences between each component of the observations and test point.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccccc}
+Obs. & X1 & X2 & X3 & Y & Euclidean\,Distance\\
+1 & 0 & 3 & 0 & Red & \text{\ensuremath{\sqrt{(0-0)^{2}+(3-0)^{2}+(0-0)^{2}}=3}}\\
+2 & 2 & 0 & 0 & Red & \text{\ensuremath{\sqrt{(2-0)^{2}+(0-0)^{2}+(0-0)^{2}}=2}}\\
+3 & 0 & 1 & 3 & Red & \text{\ensuremath{\sqrt{(0-0)^{2}+(1-0)^{2}+(3-0)^{2}}=3.2}}\\
+4 & 0 & 1 & 2 & Green & \text{\ensuremath{\sqrt{(0-0)^{2}+(1-0)^{2}+(2-0)^{2}}=2.2}}\\
+5 & -1 & 0 & 1 & Green & \text{\ensuremath{\sqrt{(-1-0)^{2}+(0-0)^{2}+(1-0)^{2}}=1.4}}\\
+6 & 1 & 1 & 1 & Red & \text{\ensuremath{\sqrt{(1-0)^{2}+(1-0)^{2}+(1-0)^{2}}=1.7}}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) This is computing k-nearest neighbors to the test point (0,0,0) with
+ k = 1.
+ The nearest observation to the test point is observation 5 which has a
+ Euclidean distance of about 1.4.
+ Because observation 5 is green, we predict that the test point will be
+ green.
+\end_layout
+
+\begin_layout Standard
+c) This is computing k-nearest neighbors to the test point (0,0,0) with
+ k = 3.
+ The three nearest observations to the test point are observations 5, 6,
+ and 2.
+ These 3 observations have a Euclidean distance of about 1.4, 1.7, and 2.2
+ respectively.
+ Observation 5 is green while observations 2 and 6 are red.
+ Because red is the majority, we predict that the test point will be red.
+\end_layout
+
+\begin_layout Standard
+d) The best value for K in this problem would be small.
+ This is because of the decision boundary is non linear.
+ For example if the decision boundary was very curvy the graph would show
+ a lot of variance.
+ Due to the high variance, a small value of K would be best for this problem.
+\end_layout
+
+\begin_layout Standard
+Problem 4 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 1 (p.
+ 548).
+\end_layout
+
+\begin_layout Standard
+a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{|C_{k}|}\Sigma_{i,h\in C_{k}}\Sigma_{j=1}^{p}(x_{ij}-x_{hj})^{2}=2\Sigma_{i\in C_{k}}\Sigma_{j=1}^{p}(x_{ij}-\bar{x}_{kj})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Addition is commutative so we can re-arrange the sigmas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{|C_{k}|}\Sigma_{j=1}^{p}\Sigma_{i,h\in C_{k}}(x_{ij}-x_{hj})^{2}=2\Sigma_{j=1}^{p}\Sigma_{i\in C_{k}}(x_{ij}-\bar{x}_{kj})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will expand 
+\begin_inset Formula $\Sigma_{i\in C_{k}}(x_{ij}-\bar{x}_{kj})^{2}$
+\end_inset
+
+, and just because it is easier to type temporarily
+\begin_inset Formula $\bar{x}_{kj}=\mu$
+\end_inset
+
+, 
+\begin_inset Formula $|C_{k}|=n$
+\end_inset
+
+ and 
+\begin_inset Formula $i^{'}$
+\end_inset
+
+ from the problem is really hard to see it has been renamed to 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccc}
+(x_{1}-\mu)^{2} & +\,(x_{2}-\mu)^{2} & +\,\cdots & \,+\,(x_{n}-\mu)^{2}\\
+x_{1}^{2}-2x_{1}\mu+\mu^{2} & +\,x_{2}^{2}-2x_{2}\mu+\mu^{2} & +\,\cdots & \,+\,x_{n}^{2}-2x_{n}\mu+\mu^{2}\\
+= & \Sigma x_{i}^{2} & -\,2\mu\Sigma x_{i} & +\,n\mu^{2}\\
+ & =\,\Sigma x_{i}^{2} & -2\,n\mu^{2} & +\,n\mu^{2}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because 
+\begin_inset Formula $\Sigma x_{i}=n\times\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccc}
+2\,\times & (\Sigma x_{i}^{2} & -n\mu^{2}) & =2(\Sigma x_{i}^{2}-n\mu^{2})\end{array}$
+\end_inset
+
+(Added scale factor of 2 back from the equation)
+\end_layout
+
+\begin_layout Standard
+Next we expand
+\begin_inset Formula $\Sigma_{i,h\in C_{k}}(x_{ij}-x_{hj})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{cccc}
+(x_{1j}-x_{1j})^{2}+ & (x_{1j}-x_{2j})^{2}+ & \cdots & +\,(x_{1j}-x_{nj})^{2}+\\
+(x_{2j}-x_{1j})^{2}+ & (x_{2j}-x_{2j})^{2} & +\cdots & +(x_{2j}-x_{nj})^{2}+\\
+ & \vdots\\
+(x_{nj}-x_{1j})^{2}+ & (x_{nj}-x_{2j})^{2}+ & \cdots & +\,(x_{nj}-x_{nj})^{2}\\
+=x_{1j}^{2}-2x_{1j}x_{2j}+x_{2j}^{2} & +x_{1j}^{2}-2x_{1j}x_{3j}+x_{3j}^{2} & +\cdots & +\,x_{1j}^{2}-2x_{1j}x_{nj}+x_{nj}^{2}\\
+= & nx_{1j}^{2}+ & \Sigma x_{ij}^{2} & -2x_{1j}\Sigma x_{ij}\\
+nx_{2j}^{2}+ & \Sigma x_{ij}^{2} & -2x_{2j}n\mu\\
+ & \vdots\\
+=n\Sigma x_{ij}^{2} & +n\Sigma x_{ij}^{2} & -2n\mu\Sigma x_{ij}\\
+=2n\Sigma x_{ij}^{2} & -2n^{2}\mu^{2}\\
+=2n(\Sigma x_{ij}^{2} & -n\mu^{2})\\
+\frac{1}{n}\times & 2n(\Sigma x_{ij}^{2}-n\mu^{2}) & =2(\Sigma x_{ij}^{2}-n\mu^{2})
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We have shown that the left and right sides are the same for a particular
+ 
+\begin_inset Formula $j$
+\end_inset
+
+ adding the 
+\begin_inset Formula $\Sigma_{j}$
+\end_inset
+
+ back into the original problem is just adding 
+\begin_inset Formula $p$
+\end_inset
+
+ copies of equal terms to the left and right hand sides.
+ Therefore the identity is proven.
+\end_layout
+
+\begin_layout Standard
+b) Objective 12.17 aims at minimizing the average squared distance between
+ each observation.
+ K means clustering algorithm uses a repetitive process of computing and
+ moving the cluster centroid and assigning each observation to a cluster
+ based on distance until the centroids of new clusters are not changing.
+ The process of changing the centroid reduces g the distance between each
+ observation in the cluster and the centroid.
+ K means clustering algorithm decreases Objective 12.17 in each iteration.
+ In the first step of each iteration, the relocation of the centroid reduces
+ the sum of the distances for each point, and the mean.
+ Doing this process over and over can only reduce the distances.
+ 
+\end_layout
+
+\begin_layout Standard
+Each iteration, the centroid of each cluster moves to the mean position
+ of all observations in the cluster.
+ The next step involves relocating observations to the closest centroid
+ which reduces the mean squared value.
+\end_layout
+
+\begin_layout Standard
+Problem 5 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 2 (p.
+ 548).
+\end_layout
+
+\begin_layout Standard
+See attached Figure
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Problem5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1stats202/hw1img/Scanned Documents.pdf
+	lyxscale 50
+	width 85page%
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Problem 5
+\begin_inset CommandInset label
+LatexCommand label
+name "Problem5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Problem 6 (4 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 4 (p.
+ 549).
+\end_layout
+
+\begin_layout Standard
+a) Complete linkage uses the farthest two data points and single linkage
+ uses the two closest data points.
+ Due to complete linkage using the farthest distance, the fusion would generally
+ occur higher on the tree while single linkage would occur lower on the
+ tree.
+ If the distances between the two clusters were the same, it is possible
+ that the fusions would occur at the same point.
+ Because the distance information is not provided, there is not enough informati
+on to tell which fusion would occur higher on the tree.
+\end_layout
+
+\begin_layout Standard
+b) Because there are only two points, 5 and 6, the type of linkage (single
+ or complete) is not relevant to this problem.
+ The height will be the same.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem 7 (4 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 12, Exercise 9 (p.
+ 550).
+\end_layout
+
+\begin_layout Standard
+a) See inserted Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Problem 7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1stats202/hw1img/ch12ex9v3.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Clustering of States
+\begin_inset CommandInset label
+LatexCommand label
+name "Problem 7"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) The first of three clusters would have the states: Florida, North Carolina,
+ Delaware, Louisianan, Alaska, Mississippi, South Carolina, Maryland, Arizona,
+ New Mexico, California, Illinois, New York, Michigan and Nevada.
+ The second cluster would have the states: Missouri, Arkansas, Tennessee,
+ Georgia, Colorado, Texas, Rhode Island, Wyoming, Oregon, Oklahoma, Virginia,
+ Washington, and New Jersey.
+ The third cluster would have the states: Ohio, Utah, Connecticut, Pennsylvanian
+, Nebraska, Kentucky, Montana, Idaho, Indiana, Kansas, Hawaii, Minnesota,
+ Wisconsin, Iowa, New Hampshire, West Virginia, Maine, South Dakota, North
+ Dakota, and Vermont.
+ 
+\end_layout
+
+\begin_layout Standard
+c) See inserted Figure.
+ Done by computing z scores.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Problem 7 Cont"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1stats202/hw1img/ch12ex9pt2.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Clustering of States with Standard Deviation of 1
+\begin_inset CommandInset label
+LatexCommand label
+name "Problem 7 Cont"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d) The main affect with changing the hierarchical clustering with complete
+ linkage with a standard deviation of one is that there were an increase
+ in the number of clusters.
+ Due to the increase in the number of clusters the size of the clusters
+ was a lot smaller (having less states).
+ I created this graph by computing z scores for each state, satisfying the
+ standard deviation of one requirement.
+ As the clutters did not change to much, I think the variables should have
+ been scaled a different method such as by median or mode.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem 8 (4 points)
+\end_layout
+
+\begin_layout Standard
+Chapter 3, Exercise 4 (p.
+ 122).
+\end_layout
+
+\begin_layout Standard
+a) Referencing sketch of error value and flexibility in problem 2 part 'a'
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bbb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For training data, as flexibility increases residual sum of squares (RSS)
+ decreases.
+ A cubic model is more flexible than a linear model.
+ So RSS is smaller for a cubic model than a linear model.
+ For this problem, we would expect the RSS to be lower for a cubic model.
+ 
+\end_layout
+
+\begin_layout Standard
+b) The cubic model would have a higher RSS than a linear model when using
+ test data.
+ The cubic model would over fit and lead to higher error.
+ 
+\end_layout
+
+\begin_layout Standard
+c) The same answer from 'a' would apply.
+ For training data, a more flexible model such as the cubic model would
+ have a lower RSS than a less flexible model like the linear model even
+ if the true relationship between X and Y is unknown.
+\end_layout
+
+\begin_layout Standard
+d) Determining whether to use a cubic model or a linear model for this would
+ be quite difficult as we do not know how far the relationship between X
+ and Y is from being linear.
+ If the relationship is very far from linear the cubic model would work
+ better.
+ If the relationship is quite close from linear a linear model would work
+ better 
+\end_layout
+
+\begin_layout Standard
+Problem 9 (4 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 3, Exercise 9 (p.
+ 123).
+ In parts (e) and (f), you need only try a few interactions and transformations.
+\end_layout
+
+\begin_layout Standard
+a) See inserted Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Problem 9"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Note: Some of the names are slightly cut off due to image sizing difficulties.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1stats202/hw1img/ch13p9sp.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Multi Scatter plot
+\begin_inset CommandInset label
+LatexCommand label
+name "Problem 9"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) Here is the computed matrix of correlations between the variables using
+ python function corrcoef cor_a = corrcoef(data_a, rowvar=False).
+\end_layout
+
+\begin_layout Verbatim
+
+[ 1.
+     -0.7776 -0.8051 -0.7784 -0.8322  0.4233  0.5805  0.5652]  
+\end_layout
+
+\begin_layout Verbatim
+
+[-0.7776  1.
+      0.9508  0.843   0.8975 -0.5047 -0.3456 -0.5689]  
+\end_layout
+
+\begin_layout Verbatim
+
+[-0.8051  0.9508  1.
+      0.8973  0.933  -0.5438 -0.3699 -0.6145]  
+\end_layout
+
+\begin_layout Verbatim
+
+[-0.7784  0.843   0.8973  1.
+      0.8645 -0.6892 -0.4164 -0.4552]  
+\end_layout
+
+\begin_layout Verbatim
+
+[-0.8322  0.8975  0.933   0.8645  1.
+     -0.4168 -0.3091 -0.585 ]  
+\end_layout
+
+\begin_layout Verbatim
+
+[ 0.4233 -0.5047 -0.5438 -0.6892 -0.4168  1.
+      0.2903  0.2127]  
+\end_layout
+
+\begin_layout Verbatim
+
+[ 0.5805 -0.3456 -0.3699 -0.4164 -0.3091  0.2903  1.
+      0.1815]  
+\end_layout
+
+\begin_layout Verbatim
+
+[ 0.5652 -0.5689 -0.6145 -0.4552 -0.585   0.2127  0.1815  1.
+    ]]
+\end_layout
+
+\begin_layout Standard
+
+________________________________________________________________________________
+___
+\end_layout
+
+\begin_layout Standard
+c) The coefficients for the predictor variables for multiple linear regression
+ are below.
+ These can be used to fit the regression.
+\end_layout
+
+\begin_layout Verbatim
+
+[('mpg', -0.49337631885848043), ('cylinders', 0.01989564374201724), ('displacement
+', -0.016951144227500457), ('horsepower', -0.006474043397440474), 
+\end_layout
+
+\begin_layout Verbatim
+
+('weight', 0.08057583832486492), ('acceleration', 0.7507726779503119), ('year',
+ 1.4261404954231538), ('origin', -17.21843462201754)]
+\end_layout
+
+\begin_layout Standard
+
+________________________________________________________________________________
+___
+\end_layout
+
+\begin_layout Standard
+i) Cylinders, weight, year and origin have a relation ship with the response
+ variable mpg because the p values are less than 0.05 (0.008, 0.000,0.000)
+\end_layout
+
+\begin_layout Standard
+ii) The predictors with the most influence are below.
+ These are in decreasing order of influence
+\end_layout
+
+\begin_layout Standard
+pred_influence ['origin', 'year', 'acceleration', 'mpg', 'weight', 'cylinders',
+ 'displacement', 'horsepower']
+\end_layout
+
+\begin_layout Standard
+iii) The coefficient for year, 1.426, suggests that for every one year the
+ mpg increases by 1.426.
+\end_layout
+
+\begin_layout Standard
+d) Diagnostic plots of the linear regression fit 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Problem 9 Cont"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The residual plot does suggest that there could be potential outlines as
+ several of the residuals are quite high.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1stats202/hw1img/prob9partd.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Residual Plot
+\begin_inset CommandInset label
+LatexCommand label
+name "Problem 9 Cont"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e and f) I did several transformations and interaction affects.
+ The data can be seen below.
+ The transformations and interactions did appear to have significant affects
+ as the 
+\begin_inset Formula $r^{2}$
+\end_inset
+
+changed by about 5% and some of the coefficients changed by multiple magnitudes
+ of 10.
+\end_layout
+
+\begin_layout Standard
+Control: Coefficients b_v=array([-4.93e-01, 1.99e-02, -1.70e-02, -6.47e-03,
+ 8.06e-02, 7.51e-01, 1.43e+00, -1.72e+01]) Control: r squared = 0.8214780764810599
+ 
+\end_layout
+
+\begin_layout Standard
+Horse Power Squared: Coefficients b_v=array([ 1.01e-03, 3.49e-01, -7.56e-03,
+ -3.19e-01, -3.27e-03, -3.31e-01, 7.35e-01, 1.01e+00, 1.32e+00]) Horse Power Squared:
+ r squared = 0.8552261337659226 
+\end_layout
+
+\begin_layout Standard
+Horse Power Square Root: Coefficients b_v=array([-1.05e+01, 6.04e-02, -5.87e-03,
+ 4.24e-01, -3.29e-03, -3.34e-01, 7.40e-01, 9.16e-01, 4.30e+01]) Horse Power Square
+ Root: r squared = 0.8590511148607127 
+\end_layout
+
+\begin_layout Standard
+Horse Power Log: Coefficients b_v=array([-2.69e+01, -5.53e-02, -4.61e-03, 1.76e-01,
+ -3.37e-03, -3.28e-01, 7.42e-01, 8.98e-01, 8.67e+01]) Horse Power Log: r squared
+ = 0.8591868799104232 
+\end_layout
+
+\begin_layout Standard
+Horse Power * Weight: Coefficients b_v=array([ 5.53e-05, -2.96e-02, 5.95e-03,
+ -2.31e-01, -1.12e-02, -9.02e-02, 7.69e-01, 8.34e-01, 2.88e+00]) Horse Power *
+ Weight: r squared = 0.8618378127814719 
+\end_layout
+
+\begin_layout Standard
+Horse Power * Weight * Acceleration: Coefficients b_v=array([ 5.53e-05, -2.96e-02,
+ 5.95e-03, -2.31e-01, -1.12e-02, -9.02e-02, 7.69e-01, 8.34e-01, 2.88e+00]) Horse
+ Power * Weight * Acceleration: r squared = 0.8618378127814719 
+\end_layout
+
+\begin_layout Standard
+Problem 10 (4 points) 
+\end_layout
+
+\begin_layout Standard
+Chapter 3, Exercise 14 (p.
+ 127).
+\end_layout
+
+\begin_layout Standard
+a) Important note: I did all of this in Python, so the numbers and outcomes
+ will be different than that of the number generation in R
+\end_layout
+
+\begin_layout Standard
+The Regression coefficients are below.
+ The first term is constant, the second term is x1 and the third term is
+ x2
+\end_layout
+
+\begin_layout Standard
+[2.1892844 0.70462854 2.50240496] 
+\end_layout
+
+\begin_layout Standard
+b) The scatter plot of x1 and x2 is below.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Problem 10"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hw1stats202/hw1img/ch3p14.pdf
+	lyxscale 50
+	width 85page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plot of X1 and X2
+\begin_inset CommandInset label
+LatexCommand label
+name "Problem 10"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+c) We can reject the null hypothesis for 
+\begin_inset Formula $\beta_{2}=0$
+\end_inset
+
+ because the p value (0.031) is less than 0.05
+\end_layout
+
+\begin_layout Standard
+d) Control: Coefficients b_v=array([2.1892844 , 0.70462854, 2.50240496]) Control:
+ r squared = 0.26050814407433387 X1 Only: Coefficients b_v=array([2.2485807
+ , 1.87698651]) X1 Only: r squared = 0.22380210449292925 
+\end_layout
+
+\begin_layout Standard
+We reject the null hypothesis because the p value is 0.001 which is less
+ than 0.05.
+\end_layout
+
+\begin_layout Standard
+e)X2 Only: Coefficients b_v=array([2.26552605, 3.56127637]) X2 Only: r squared
+ = 0.25117295449150645 
+\end_layout
+
+\begin_layout Standard
+We reject the null hypothesis because the p value is 0.000 which is less
+ than 0.05
+\end_layout
+
+\begin_layout Standard
+f) The results some what contradict each other because we failed to reject
+ the null hypothesis for 
+\begin_inset Formula $\beta1$
+\end_inset
+
+ but our multiple linear regression used both 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e/g) New Control: Coefficients b_v=array([2.1892844 , 0.70462854, 2.50240496])
+ New Control: r squared = 0.26050814407433387 
+\end_layout
+
+\begin_layout Standard
+We reject the null hypothesis because the p value is 0.000 which is less
+ than 0.05
+\end_layout
+
+\begin_layout Standard
+New X1 Only: Coefficients b_v=array([2.3583255 , 1.72252265]) New X1 Only:
+ r squared = 0.1810937124191967 
+\end_layout
+
+\begin_layout Standard
+We reject the null hypothesis because the p value is 0.000 which is less
+ than 0.05
+\end_layout
+
+\begin_layout Standard
+New X2 Only: Coefficients b_v=array([2.23312681, 3.72160649]) New X2 Only:
+ r squared = 0.2877215955818587 
+\end_layout
+
+\begin_layout Standard
+We reject the null hypothesis because the p value is 0.000 which is less
+ than 0.05
+\end_layout
+
+\begin_layout Standard
+Problem 11 (5 points)
+\end_layout
+
+\begin_layout Standard
+Mean Squared Error (MSE) is 
+\begin_inset Formula $\frac{1}{n}\Sigma(x-\mu)^{2}$
+\end_inset
+
+.
+ However this can be broken down into three parts which are square bias,
+ variance and irreducible error.
+ The breaking down of mean squared error into these three parts is known
+ as the bias variance decomposition which is closely related to the bias
+ variance trade off.
+ Bias and variance change depending on the flexibility, the number of parameters
+ of the fitted function.
+ The reason why there is a trade off is flexibility.
+ Low variance scenarios are those of a simple function, one with low flexibility.
+ Low bias scenarios are those of high complexity or high flexibility.
+ Because of this, there is a trade off between bias and variance if one
+ would want to keep both low.
+ Irreducible error is error that is always there.
+ These three components make up mean square error.
+ The three components show what bias decomposition is.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem 12 (5 points) 
+\end_layout
+
+\begin_layout Standard
+Let x1 , .
+ .
+ .
+ , xn be a fixed set of input points and yi = f (xi ) + ϵi , where ϵi iid∼
+ Pϵ with E (ϵi ) = 0 and Var (ϵi ) < ∞.
+ Prove that the MSE of a regression estimate fˆ fit to (x1 , y1 ), .
+ .
+ .
+ , (xn , yn ) for a random test 
+\end_layout
+
+\begin_layout Standard
+x0 or E y0 − fˆ(x0 ) decomposes into variance, square bias, and irreducible
+ error components.
+ Hint: You can apply the bias-variance decomposition proved in class.
+\end_layout
+
+\begin_layout Standard
+Problem 12 (5 points)
+\end_layout
+
+\begin_layout Standard
+a
+\end_layout
+
+\begin_layout Standard
+Assume that 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+are mean subtracted, i.e.
+ 
+\begin_inset Formula $y_{i}^{'}$
+\end_inset
+
+and 
+\begin_inset Formula $x_{i}^{'}$
+\end_inset
+
+were the original variables and 
+\begin_inset Formula $y_{i}=y_{i}^{'}-\bar{y^{'}}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{i}=x_{i}^{'}-\bar{x^{'}}$
+\end_inset
+
+ respectively
+\end_layout
+
+\begin_layout Standard
+MSE 
+\begin_inset Formula $=\frac{1}{n}\Sigma(y_{i}-\hat{y_{i})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{n}\Sigma(y_{i}-\hat{f}(x_{i}))^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{n}\Sigma(y_{i}-\beta x_{i})^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{dMSE}{d\beta}=\frac{1}{n}\Sigma2(y_{i}-\beta x_{i})(-x_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{n}\Sigma(y_{i}-\beta x_{i})x_{i}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2 and '-' sign go away because right hand side is zero
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{n}\Sigma(y_{i}x_{i}-\beta x_{i}x_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{n}\Sigma y_{i}x_{i}=\frac{1}{n}\Sigma\beta x_{i}x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\beta=\frac{\sigma_{xy}}{\sigma_{x}^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because 
+\begin_inset Formula $\frac{1}{n}\Sigma y_{i}x_{i}=\sigma_{xy}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{n}\Sigma x_{i}x_{i}=\sigma_{x}^{2}$
+\end_inset
+
+when the variables have been mean subtracted 
+\end_layout
+
+\begin_layout Standard
+(b) 
+\begin_inset Formula $\sigma^{2}/(x_{i}-\bar{x})^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
