@@ -1,0 +1,33 @@
+MOMENTUM STRATEGY BACKTEST RESULTS - NVDA
+================================================================================
+
+STRATEGY PARAMETERS:
+----------------------------------------
+rsi_period: 12
+rsi_oversold: 54.72878570317954
+rsi_overbought: 70
+ma_short: 38
+ma_long: 142
+volume_ma: 20
+
+
+PERFORMANCE METRICS:
+----------------------------------------
+Total Return: 1908.41%
+Annualized Return: 82.47%
+Sharpe Ratio: 1.613
+Sortino Ratio: 2.350
+Max Drawdown: 34.23%
+Win Rate: 39.73%
+Final Portfolio Value: $200,840.84
+Buy & Hold Return: 2201.97%
+Excess Return vs Buy & Hold: -293.56%
+
+
+TRADE HISTORY (3 trades):
+--------------------------------------------------------------------------------
+Date         Type        Price     Shares           Value
+--------------------------------------------------------------------------------
+2020-07-27   BUY         10.39      960.0 $      9,990.60
+2022-02-28   SELL        24.34      960.0 $     23,317.61
+2023-01-10   BUY         15.89     1464.0 $     23,314.02
