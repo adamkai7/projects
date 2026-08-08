@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data (cached prices can be large; keep schema/examples tracked)
+data/cache/*
+!data/cache/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+*.db
+*.sqlite
+*.duckdb
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Notebooks checkpoints
+notebooks/.ipynb_checkpoints/
+
+# Results artifacts
+results/*
+!results/.gitkeep

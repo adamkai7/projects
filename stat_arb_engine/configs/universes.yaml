@@ -1,0 +1,208 @@
+# QQQ ≈ Nasdaq-100 constituents (fetched from Nasdaq API; GOOG dropped vs GOOGL).
+# Sectors are coarse tags for optional same-sector filtering / write-ups.
+
+qqq:
+  AAPL: Technology
+  ABNB: Consumer Discretionary
+  ADBE: Technology
+  ADI: Technology
+  ADP: Industrials
+  ADSK: Technology
+  AEP: Utilities
+  ALAB: Technology
+  ALNY: Health Care
+  AMAT: Technology
+  AMD: Technology
+  AMGN: Health Care
+  AMZN: Consumer Discretionary
+  APP: Technology
+  ARM: Technology
+  ASML: Technology
+  AVGO: Technology
+  AXON: Industrials
+  BKNG: Consumer Discretionary
+  BKR: Energy
+  CCEP: Consumer Staples
+  CDNS: Technology
+  CEG: Utilities
+  CMCSA: Communication
+  COST: Consumer Staples
+  CPRT: Industrials
+  CRWD: Technology
+  CRWV: Nasdaq100
+  CSCO: Technology
+  CSX: Industrials
+  CTAS: Industrials
+  DASH: Consumer Discretionary
+  DDOG: Technology
+  DXCM: Health Care
+  EXC: Utilities
+  FANG: Energy
+  FAST: Industrials
+  FER: Industrials
+  FTNT: Technology
+  GEHC: Health Care
+  GILD: Health Care
+  GOOGL: Communication
+  HON: Industrials
+  HONA: Nasdaq100
+  IDXX: Health Care
+  INTC: Technology
+  INTU: Technology
+  ISRG: Health Care
+  KDP: Consumer Staples
+  KHC: Consumer Staples
+  KLAC: Technology
+  LIN: Materials
+  LITE: Technology
+  LRCX: Technology
+  MAR: Consumer Discretionary
+  MCHP: Technology
+  MDLZ: Consumer Staples
+  MELI: Consumer Discretionary
+  META: Communication
+  MNST: Consumer Staples
+  MPWR: Technology
+  MRVL: Technology
+  MSFT: Technology
+  MSTR: Technology
+  MU: Technology
+  NBIS: Nasdaq100
+  NFLX: Communication
+  NVDA: Technology
+  NXPI: Technology
+  ODFL: Industrials
+  ORLY: Consumer Discretionary
+  PANW: Technology
+  PAYX: Industrials
+  PCAR: Industrials
+  PDD: Consumer Discretionary
+  PEP: Consumer Staples
+  PLTR: Technology
+  PYPL: Financials
+  QCOM: Technology
+  REGN: Health Care
+  RKLB: Industrials
+  ROP: Industrials
+  ROST: Consumer Discretionary
+  SBUX: Consumer Discretionary
+  SHOP: Technology
+  SNDK: Technology
+  SNPS: Technology
+  SPCX: Nasdaq100
+  STX: Technology
+  TER: Technology
+  TMUS: Communication
+  TRI: Financials
+  TSLA: Consumer Discretionary
+  TTWO: Communication
+  TXN: Technology
+  VRTX: Health Care
+  WBD: Communication
+  WDAY: Technology
+  WDC: Technology
+  WMT: Consumer Staples
+  XEL: Utilities
+liquid50:
+  AAPL: Technology
+  MSFT: Technology
+  GOOGL: Technology
+  AMZN: Consumer Discretionary
+  META: Technology
+  NVDA: Technology
+  AVGO: Technology
+  ORCL: Technology
+  CRM: Technology
+  ADBE: Technology
+  JPM: Financials
+  BAC: Financials
+  WFC: Financials
+  GS: Financials
+  MS: Financials
+  C: Financials
+  BLK: Financials
+  SCHW: Financials
+  AXP: Financials
+  V: Financials
+  XOM: Energy
+  CVX: Energy
+  COP: Energy
+  SLB: Energy
+  EOG: Energy
+  JNJ: Health Care
+  UNH: Health Care
+  PFE: Health Care
+  ABBV: Health Care
+  MRK: Health Care
+  LLY: Health Care
+  TMO: Health Care
+  ABT: Health Care
+  PG: Consumer Staples
+  KO: Consumer Staples
+  PEP: Consumer Staples
+  WMT: Consumer Staples
+  COST: Consumer Staples
+  HD: Consumer Discretionary
+  MCD: Consumer Discretionary
+  NKE: Consumer Discretionary
+  SBUX: Consumer Discretionary
+  CAT: Industrials
+  HON: Industrials
+  UNP: Industrials
+  GE: Industrials
+  BA: Industrials
+  NEE: Utilities
+  DUK: Utilities
+  SO: Utilities
+sp100_extra:
+  INTC: Technology
+  AMD: Technology
+  QCOM: Technology
+  TXN: Technology
+  IBM: Technology
+  CSCO: Technology
+  MA: Financials
+  BRK-B: Financials
+  SPGI: Financials
+  USB: Financials
+  PNC: Financials
+  T: Communication
+  VZ: Communication
+  CMCSA: Communication
+  DIS: Communication
+  NFLX: Communication
+  PM: Consumer Staples
+  MO: Consumer Staples
+  CL: Consumer Staples
+  MDLZ: Consumer Staples
+  LOW: Consumer Discretionary
+  TJX: Consumer Discretionary
+  GM: Consumer Discretionary
+  F: Consumer Discretionary
+  LIN: Materials
+  APD: Materials
+  SHW: Materials
+  FCX: Materials
+  NEM: Materials
+  RTX: Industrials
+  LMT: Industrials
+  DE: Industrials
+  MMM: Industrials
+  UPS: Industrials
+  AMT: Real Estate
+  PLD: Real Estate
+  SPG: Real Estate
+  AEP: Utilities
+  SRE: Utilities
+  EXC: Utilities
+  PXD: Energy
+  OXY: Energy
+  PSX: Energy
+  MPC: Energy
+  VLO: Energy
+  AMGN: Health Care
+  GILD: Health Care
+  BMY: Health Care
+  MDT: Health Care
+  ISRG: Health Care
+  SYK: Health Care

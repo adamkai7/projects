@@ -1,0 +1,48 @@
+# Default research configuration for the stat-arb engine.
+# Keep strategy parameters here so experiments are reproducible and auditable.
+
+data:
+  # QQQ ≈ Nasdaq-100 constituents (see configs/universes.yaml).
+  universe: "qqq"               # qqq | liquid50 | sp100 | custom
+  custom_tickers: []            # used when universe: custom
+  start_date: "2015-01-01"
+  end_date: null                # null => today
+  cache_dir: "data/cache"
+  db_path: "data/stat_arb.db"
+  # Newer NDX names may have shorter history; 3y≈756 trading days is enough for EG.
+  min_history_days: 756
+
+screening:
+  # Engle-Granger cointegration screen on all QQQ pairs (correlation pre-filter).
+  significance_level: 0.05      # reject H0 (no cointegration) if p < this
+  min_correlation: 0.6          # slightly stricter on broad QQQ to cut spurious pairs
+  lookback_days: 756            # ~3 trading years for the cointegration test window
+  max_pairs: 40                 # keep top-N by p-value after screening
+  same_sector_only: false       # all QQQ pairs; set true to restrict within sector
+
+signals:
+  zscore_window: 60             # rolling window for spread mean/std
+  entry_z: 2.0                  # enter when |z| exceeds this
+  exit_z: 0.5                   # exit when |z| mean-reverts inside this
+  stop_z: 4.0                   # hard stop if divergence blows out further
+  hedge_ratio_method: "ols"     # ols | rolling_ols
+  rolling_hedge_window: 60      # only used if hedge_ratio_method: rolling_ols
+
+backtest:
+  initial_capital: 100000.0
+  position_size: 0.1            # fraction of capital allocated per leg (gross)
+  transaction_cost_bps: 5.0     # one-way commission + fees, basis points
+  slippage_bps: 2.0             # one-way slippage assumption
+  borrow_cost_bps_annual: 50.0  # rough short-borrow cost
+  max_holding_days: 60          # optional time stop; null to disable
+
+validation:
+  train_days: 756               # ~3y train window
+  test_days: 126                # ~6m out-of-sample window
+  step_days: 63                 # roll forward by ~1 quarter
+  n_permutations: 1000          # Monte Carlo null simulations
+  random_seed: 42
+
+metrics:
+  risk_free_rate: 0.02          # annualized, for Sharpe/Sortino
+  trading_days_per_year: 252
