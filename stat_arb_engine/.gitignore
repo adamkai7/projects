@@ -36,3 +36,7 @@ notebooks/.ipynb_checkpoints/
 # Results artifacts
 results/*
 !results/.gitkeep
+
+# Local study notes only — not published to GitHub
+docs/STUDY_NOTES.md
+docs/RESEARCH_REPORT.md
