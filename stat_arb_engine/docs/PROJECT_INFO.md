@@ -95,7 +95,7 @@ Cointegration screening on QQQ pairs finds many statistically mean-reverting spr
 ## How to run
 
 ```bash
-cd stat-arb-engine
+cd stat_arb_engine
 source .venv/bin/activate
 pip install -e ".[dev]"   # if needed
 
@@ -108,6 +108,7 @@ stat-arb run-significance-test --pair-id DDOG_PANW --source walkforward
 ```
 
 Config: `configs/default.yaml`  
+Plain-language overview: `docs/PROJECT_SUMMARY.md`  
 Tests: `pytest -q`
 
 ---

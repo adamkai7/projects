@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "stat-arb-engine"
 version = "0.1.0"
 description = "Statistical arbitrage research & backtesting engine with walk-forward validation"
-readme = "README.md"
+readme = "docs/PROJECT_INFO.md"
 requires-python = ">=3.10"
 authors = [{ name = "Adam" }]
 dependencies = [

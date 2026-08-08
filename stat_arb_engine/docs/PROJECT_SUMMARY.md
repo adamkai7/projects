@@ -8,7 +8,7 @@ A plain-language overview of what was built, what we found, and what it means.
 
 A Python research tool that looks for **pairs of QQQ (Nasdaq-100) stocks** that tend to move back together when their prices drift apart, then **tests whether trading that idea would have worked** after realistic frictions.
 
-It is a research / interview project, not a live trading system and not investment advice.
+Educational research only — not a live trading system and not investment advice.
 
 ---
 
@@ -66,26 +66,21 @@ On this QQQ run, with a simple z-score mean-reversion rule and cost-aware out-of
 - cointegration was relatively common under a naïve screen,
 - durable, cost-adjusted edge was not.
 
-That is a successful research conclusion: the project shows how a quant would try to invalidate their own idea, not just decorate a resume with a backtest chart.
-
-
+---
 
 ## How to run it (short)
 
 ```bash
-cd stat-arb-engine
+cd stat_arb_engine
+python3 -m venv .venv
 source .venv/bin/activate
+pip install -e ".[dev]"
+
+stat-arb ingest-data
+stat-arb screen-pairs
 stat-arb list-pairs --max-pairs 20
 stat-arb run-backtest --pair-id ADI_KLAC
 stat-arb run-walkforward --pair-id ADI_KLAC
 ```
 
-Full internship prep (definitions, interview Q&A, resume/ATS): `docs/STUDY_NOTES.md`  
-Deeper technical report: `docs/RESEARCH_REPORT.md`
-
----
-
-## Internship positioning
-
-This project is framed for **quant research / quant analyst internships**: statistical arbitrage, cointegration screening, mean-reversion signals, and disciplined backtesting with costs and out-of-sample validation.
-
+More technical detail and tabulated results: `docs/PROJECT_INFO.md`
