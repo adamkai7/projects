@@ -1,8 +1,5 @@
 import numpy as np
 import random
-
-import numpy as np
-import random
 import matplotlib.pyplot as plt
 
 def calculate_pi(n):
@@ -27,14 +24,13 @@ def calculate_pi(n):
     plt.figure(figsize=(5, 5))
     plt.scatter(in_x_l, in_y_l, s=2, color='green')
     plt.scatter(out_x_l, out_y_l, s=2, color='red')
+    plt.gca().add_patch(plt.Circle((0, 0), 1, fill=False, color='black'))
+    plt.gca().add_patch(plt.Rectangle((-1, -1), 2, 2, fill=False, color='black'))
     plt.title(f'n = {n}, pi ≈ {pi_estimate}')
     plt.gca().set_aspect('equal')
     plt.show()
 
     return num_inside
-
-
-
 
 
 def main():
